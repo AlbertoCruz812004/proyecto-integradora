@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <input type="text">
+    <button>Home</button>
+</body>
+<script>
+    document.querySelector('button').addEventListener('click', e => {
+        const jwt = document.querySelector('input').value;
+
+        fetch('http://localhost:8080/secure/view/dash', {
+            method: 'GET',
+            headers: {
+                'Authorization': `Bearer ${jwt}`,
+                'Location': 'https://localhost:8080/secure/view/dash'
+            }
+        }).then(response => {
+            if (!response.ok) throw new Error('Network response was not ok');
+            console.log(response);
+            return response.text();
+        }).then(html => {
+            console.log(html);
+            document.body.innerHTML = html;
+        }).catch(error => {
+            console.log('There was a problem with the fetch operation', error);
+        })
+    });
+
+</script>
+
+</html>

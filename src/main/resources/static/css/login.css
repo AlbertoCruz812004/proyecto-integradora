@@ -1,0 +1,130 @@
+body {
+    animation: linear infinite 5s randomColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100svh;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-between;
+    width: 100%;
+
+    .content {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    img {
+        width: clamp(3rem, 5rem, 8rem);
+    }
+
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    svg {
+        cursor: pointer;
+    }
+}
+
+.sun {
+    display: none;
+}
+
+.moon {
+    display: none;
+}
+
+main {
+    width: 60%;
+    height: 65%;
+    margin: 0 auto;
+    padding: 0;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: #fafafa;
+    display: flex;
+    gap: 1rem;
+    border-radius: 26px;
+
+    figure {
+        background: #006AEC;
+        width: 50%;
+        border-radius: 26px 0 0 26px;
+        display: grid;
+        place-items: center;
+
+        svg {
+            width: 85%;
+            height: 85%;
+        }
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        gap: 1rem;
+        padding-top: 2rem;
+        align-items: center;
+        border-radius: 0 26px 26px 0;
+
+        p {
+            font-size: 1rem;
+            color: #aaa5a5;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            align-items: center;
+            gap: 1rem;
+            margin: 1.5rem 0 0;
+
+            label {
+                font-family: 'Roboto Bold';
+            }
+
+            input {
+                font-family: 'Roboto';
+                width: 70%;
+                border-radius: 25px;
+                border: 2px solid #d2cfcf;
+                padding: 0.7rem;
+            }
+
+            #ancla {
+                font-family: 'Roboto';
+                color: #aaa5a5;
+                font-size: 0.7rem;
+
+                a {
+                    color: #aaa5a5;
+                }
+            }
+
+            input[type="submit"] {
+                background-color: #000;
+                color: #fafafa;
+                text-align: center;
+                padding: 0;
+                height: 35px;
+                width: 70%;
+            }
+        }
+    }
+}
+
+.back {
+    background: #000;
+    color: #fafafa;
+}

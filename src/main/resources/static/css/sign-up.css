@@ -1,0 +1,371 @@
+header {
+    width: 100%;
+    display: flex;
+    position: fixed;
+    padding: 5px 1rem;
+
+
+    figure {
+        display: flex;
+        height: 100%;
+        align-items: center;
+        gap: 1rem;
+
+        img {
+            width: 10px;
+            height: 10px;
+        }
+
+        p {
+            font-family: 'Poppins';
+            font-size: 1.5rem;
+        }
+    }
+}
+
+main {
+    overflow: inherit;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100svh;
+    gap: 1rem;
+    scroll-snap-type: y mandatory;
+}
+
+section {
+    height: 100svh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: start;
+
+    .form {
+        width: 90%;
+        height: 90%;
+        background-color: #f5fffa;
+        border-radius: 15px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+        figure {
+            width: 100%;
+            height: 30%;
+            display: grid;
+            place-items: center;
+            background-color: #006AEC;
+            border-radius: 15px 15px 0 0;
+
+            svg {
+                width: 85%;
+                height: 85%;
+            }
+        }
+
+        form,
+        .email-send {
+            width: 100%;
+            min-height: 50%;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            padding: 10px 1rem 0;
+
+
+            input {
+                display: inline-block;
+                padding: 8px;
+                border-radius: 8px;
+                border: 2px solid #c2c0c9;
+                font-family: 'Roboto';
+            }
+
+            ::placeholder {
+                color: #908e9b;
+                font-family: 'Roboto Bold';
+            }
+        }
+    }
+}
+
+@media(min-width: 1024px) {
+    section {
+
+        .form,
+        .email-send {
+            display: flex;
+            width: 70%;
+            height: 70%;
+
+            figure {
+                width: 50%;
+                height: 100%;
+                border-radius: 15px 0 0 15px;
+
+                svg {
+                    width: 65%;
+                    height: 65%;
+                }
+            }
+
+            form,
+            #email {
+                width: 50%;
+                height: 100%;
+
+                h1,
+                h2,
+                h3,
+                h4,
+                h5 {
+                    font-size: 1.3rem;
+                }
+
+                input[type="submit"] {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    #payment-method-form h4 {
+        text-align: center;
+    }
+}
+
+@media(min-width: 1420px) {
+    section {
+
+        .form {
+            display: flex;
+            width: 60%;
+            height: 60%;
+
+            figure {
+                width: 50%;
+                height: 100%;
+            }
+
+            form,
+            .email-send {
+                width: 50%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+#user-creation-form {
+
+    h1 {
+        text-align: center;
+    }
+
+    #btn-register {
+        background: var(--bg-btn-blue);
+        color: var(--color-btn-white);
+        border: none;
+        font-family: 'Roboto Bold';
+        font-size: 0.8rem;
+    }
+
+    #btn-google {
+        background-color: var(--bg-btn-black);
+        color: var(--color-btn-white);
+        font-family: var(--font-bold);
+        font-size: 0.8rem;
+    }
+
+    .container-line {
+        width: 100%;
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 0 auto;
+
+        .line {
+            background-color: #c2c0c9;
+            height: 2px;
+            width: 40%;
+        }
+
+        p {
+            color: #908e9b;
+            font-family: 'Roboto Bold';
+        }
+    }
+}
+
+#user-information-form {
+    h2 {
+        text-align: center;
+    }
+
+    #btn-register-person {
+        background-color: var(--bg-btn-blue);
+        font-family: var(--font-bold);
+        color: var(--color-btn-white);
+        border: none;
+        font-size: 0.8rem;
+    }
+}
+
+#plan-selection-form {
+    h3 {
+        text-align: center;
+        font-size: 1.4rem;
+    }
+
+    .plan {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.8rem;
+        width: 100%;
+        border: 2px solid #A4CFD2;
+        border-radius: 8px;
+        padding: 0.4rem;
+        cursor: pointer;
+        height: 80px;
+
+        h6 {
+            font-size: 1rem;
+            font-family: 'Roboto Bold';
+        }
+
+        ul {
+            list-style: none;
+
+            li {
+                font-size: 0.8rem;
+                color: #B9B9B9;
+                font-family: 'Roboto';
+            }
+        }
+    }
+
+    #btn-selection-plan {
+        background-color: var(--bg-btn-blue);
+        color: var(--color-btn-white);
+        font-family: var(--font-bold);
+        border: none;
+        font-size: 0.8rem;
+    }
+}
+
+#payment-method-form {
+    .methods {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        width: 100%;
+        height: 50px;
+
+        .circle {
+            background: #0c0b0b;
+            border-radius: 100%;
+            width: 30px;
+            height: 30px;
+            display: grid;
+            place-items: center;
+            cursor: pointer;
+        }
+    }
+
+    fieldset {
+        padding: 0.5rem;
+        width: 100%;
+        border: none;
+        color: #b6b3b3;
+        font-family: 'Roboto';
+
+        input {
+            width: 100%;
+        }
+    }
+
+    .card-data {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 0.5rem;
+        font-family: 'Roboto';
+        font-size: 1rem;
+        color: #b6b3b3;
+        transform: translateX(5px);
+        padding: 0.5rem;
+
+
+        #in-cvv {
+            width: 100%;
+        }
+
+        select {
+            display: inline-block;
+            padding: 0.4rem;
+            border-radius: 25px;
+            background-color: transparent;
+            border: none;
+            font-family: 'Roboto';
+            border: 1px solid #D8D4D4;
+        }
+    }
+
+    #btn-pay {
+        background-color: var(--bg-btn-blue);
+        color: var(--color-btn-white);
+        border: none;
+        font-size: 0.8rem;
+        font-family: var(--font-bold);
+    }
+}
+
+@media (min-width: 1024px) {
+    #payment-method-form {
+        input {
+            padding: 6px;
+        }
+    }
+}
+
+#email {
+    h5 {
+        font-size: 1.4rem;
+        font-family: 'Poppins';
+        text-align: center;
+    }
+
+    .email-icon {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        width: 100%;
+        height: 50px;
+
+        .circle {
+            background: #0c0b0b;
+            border-radius: 100%;
+            width: 30px;
+            height: 30px;
+            display: grid;
+            place-items: center;
+            cursor: pointer;
+        }
+    }
+
+}
+
+@media(min-width:1024px) {
+    #email p {
+        text-align: center;
+        font-size: 1rem;
+    }
+}
+
+.hidden {
+    display: none;
+}

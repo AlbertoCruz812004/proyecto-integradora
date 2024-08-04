@@ -1,0 +1,455 @@
+header {
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+
+    .logo-name {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+
+        img {
+            width: 3.8rem;
+            height: 3rem;
+        }
+
+        p {
+            font-family: 'Poppins';
+        }
+    }
+
+    .buttons {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+@media(min-width: 768px) {
+    header .buttons {
+        margin-right: 2rem;
+
+        button {
+            padding: 5px 2rem;
+        }
+    }
+}
+
+main {
+    display: flex;
+
+    min-height: 80vh;
+    flex-direction: column;
+
+    h1 {
+        text-align: center;
+    }
+
+    .content {
+        margin-top: 4rem;
+        text-align: center;
+
+        button {
+            margin-top: 3rem;
+            width: 90%;
+        }
+    }
+
+    img {
+        margin: 10px auto 0;
+        width: 60%;
+    }
+}
+
+@media(min-width: 780px) {
+    main {
+        padding: 0 3rem;
+        align-items: center;
+        gap: 0;
+
+        .content {
+            width: 60%;
+        }
+
+        img {
+            width: 30%;
+            margin: 10px 1px 0;
+        }
+    }
+}
+
+@media(min-width: 1024px) {
+    main {
+        gap: 0 2rem;
+
+        h1 {
+            font-size: 3rem;
+        }
+
+        .content {
+
+            p {
+                font-size: 1.5rem;
+            }
+        }
+
+        img {
+            width: 35%;
+        }
+    }
+}
+
+#benefits-section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+
+    .content {
+        margin-bottom: 10rem;
+
+        h2,
+        p {
+            text-align: center;
+        }
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .box-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+
+            .beneffit {
+                display: flex;
+                flex-direction: column;
+                gap: 0.8rem;
+
+                .icon {
+                    display: grid;
+                    place-items: center;
+                    background-color: #000;
+                    border-radius: 15px;
+                    width: 3rem;
+                    height: 3rem;
+                    margin: 0 auto;
+
+                    svg {
+                        max-width: 50%;
+                        filter: invert(1);
+                    }
+                }
+
+                h3 {
+                    text-align: center;
+                }
+            }
+        }
+
+        .center {
+            display: flex;
+            margin: 3rem 0;
+            width: 100%;
+
+            .circle {
+
+                background-color: #000;
+                border-radius: 100%;
+                width: 180px;
+                height: 180px;
+                margin: 0 auto;
+                display: grid;
+                place-items: center;
+
+                img {
+                    transform: scale(170%) translateX(-2px);
+                    width: 80%;
+                }
+            }
+        }
+    }
+}
+
+@media(min-width: 760px) {
+    #benefits-section .container {
+        flex-direction: row;
+
+        .center {
+            align-items: center;
+        }
+    }
+}
+
+@media(min-width: 1024px) {
+    #benefits-section .container {
+        /* margin-top: 3rem; */
+        padding: 0 5rem;
+
+        .beneffit {
+            h3 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 15px;
+            }
+        }
+
+        .center {
+            margin: 0;
+
+            .circle {
+                width: clamp(200px, 300px, 350px);
+                height: clamp(200px, 300px, 350px);
+            }
+        }
+    }
+}
+
+#plans-section {
+    min-height: 100vh;
+
+    h3 {
+        text-align: center;
+    }
+
+    p {
+        margin: 1rem;
+        text-align: center;
+    }
+
+    .plans {
+        margin-top: 1.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+
+
+        .plan {
+            display: flex;
+            flex-direction: column;
+            border: 2px solid #000;
+            border-radius: 16px;
+            width: 70%;
+            height: auto;
+            margin: 0 auto;
+
+            h4 {
+                text-align: center;
+                font-size: 1.1rem;
+                background-color: #000;
+                color: #fff;
+                border-radius: 13px 13px 0 0;
+                padding: 8px 0;
+            }
+
+            .price {
+                font-size: 1.8rem;
+                font-family: 'Poppins';
+                margin: 10px 0 0 15px;
+            }
+
+            .features ul li {
+                display: flex;
+                margin-left: 10px;
+                list-style: none;
+                margin: 1rem;
+                gap: 1.5rem;
+
+                svg {
+                    width: 1.2rem;
+                    display: inline-block;
+                }
+
+            }
+
+            button {
+                margin: 2rem auto;
+                width: 50%;
+            }
+        }
+    }
+}
+
+@media(min-width: 768px) {
+    #plans-section {
+        /* margin-top: 10vh; */
+
+        #description {
+            margin: 1rem 0 3rem;
+            text-align: center;
+        }
+
+        .plans .plan {
+            width: 28%;
+            height: 35vh;
+
+            .price {
+                font-size: 2rem;
+            }
+
+            .features {
+                height: 50%;
+
+                ul li {
+                    display: flex;
+
+                }
+            }
+
+            button {
+                margin: 2rem auto;
+                width: 50%;
+            }
+        }
+    }
+}
+
+@media(min-width: 1024px) {
+    #plans-section {
+        height: 80vh;
+
+        .plans {
+            height: 80%;
+
+            .plan {
+                width: 22%;
+                height: 90%;
+            }
+        }
+    }
+}
+
+#final-section {
+    margin: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 1rem;
+    background-color: #000;
+    border-radius: 15px;
+    height: auto;
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        h3,
+        p {
+            text-align: center;
+            color: #fff;
+        }
+
+        button {
+            padding: 5px 0;
+            border-color: #fff;
+            color: #fff;
+        }
+    }
+
+    img {
+        margin: 0 auto;
+        width: 80%;
+    }
+}
+
+@media(min-width: 768px) {
+    #final-section {
+
+        .content {
+            width: 60%;
+
+            p {
+                font-size: 1rem;
+            }
+        }
+
+        img {
+            margin: 0 1px;
+            width: 30%;
+            object-fit: contain;
+            transform: scale(1.5);
+        }
+    }
+}
+
+@media(min-width: 1024px) {
+    #final-section {
+        justify-content: space-evenly;
+
+        .content {
+            width: 50%;
+
+            button {
+                width: 60%;
+                margin: 0 auto;
+            }
+        }
+
+        img {
+            margin: 0 1px;
+            width: 20%;
+            object-fit: contain;
+        }
+    }
+}
+
+footer {
+    background-color: #000;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+    width: 100%;
+
+    div {
+        width: 90%;
+
+        h4 {
+            text-align: center;
+            color: #fff;
+            font-size: 1.2rem;
+        }
+
+        ul li {
+            margin: 1rem 0;
+            display: flex;
+            gap: 1rem;
+            list-style: none;
+            color: #fff;
+            justify-content: center;
+
+
+
+            svg {
+                width: 1.5rem;
+                filter: invert(1);
+            }
+        }
+    }
+}
+
+@media(min-width: 768px) {
+    footer div {
+        width: 100%;
+
+        ul {
+            display: flex;
+            justify-content: space-around;
+            gap: 10px;
+        }
+    }
+}
+
+
+@media(min-width: 1024px) {
+    footer div {
+        width: 48%;
+    }
+}

@@ -1,0 +1,69 @@
+:root {
+    /* color */
+    --color-btn-white: #e1dfe9;
+    /* background */
+    --bg-btn-black: #161412;
+    --bg-btn-blue: #49C7D1;
+    /* font-family */
+    --font-bold: 'Roboto Bold';
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Roboto Bold';
+    src: url(../fonts/Roboto-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'Poppins';
+    font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+}
+
+p {
+    font-family: 'Roboto';
+    font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+.common-btn {
+    border: 2px solid #000;
+    border-radius: 5px;
+    padding: 3px 1rem;
+    font-family: 'Roboto Bold';
+    cursor: pointer;
+}
+
+.btn-dark {
+    background-color: #000;
+    color: #fff;
+}
+
+/* @media(max-width: 767px) {
+
+    main,
+    section,
+    footer {
+        margin-top: 2rem;
+    }
+} */
+
+main,
+footer,
+header,
+section {
+    padding: 1rem;
+}
