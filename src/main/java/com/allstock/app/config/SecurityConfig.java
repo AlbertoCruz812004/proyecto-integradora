@@ -43,10 +43,10 @@ public class SecurityConfig {
                     http.requestMatchers(HttpMethod.POST, "/user/create").permitAll();
                     http.requestMatchers(HttpMethod.POST, "/auth/**").permitAll();
                     http.requestMatchers(HttpMethod.GET, "/view/**").permitAll();
-                    http.requestMatchers(HttpMethod.GET, "/css/*").permitAll();
+                    http.requestMatchers(HttpMethod.GET, "/css/**").permitAll();
                     http.requestMatchers(HttpMethod.GET, "/images/**").permitAll();
-                    http.requestMatchers(HttpMethod.GET, "/fonts/*").permitAll();
-                    http.requestMatchers(HttpMethod.GET, "/js/*").permitAll();
+                    http.requestMatchers(HttpMethod.GET, "/fonts/**").permitAll();
+                    http.requestMatchers(HttpMethod.GET, "/js/**").permitAll();
                     http.requestMatchers(HttpMethod.GET, "/secure/view/dash").authenticated();
                     http.requestMatchers(HttpMethod.POST, "/empresa/create-empresa").permitAll();
                     http.anyRequest().denyAll();
